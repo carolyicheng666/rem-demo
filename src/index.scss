@@ -1,0 +1,110 @@
+@function px2rem($px) {
+  $rem: 37.5px;
+  @return ($px / $rem) + rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  background-color: #f8f8f8;
+}
+
+.header {
+  height: px2rem(40px);
+  width: 100%;
+  background: #80b373;
+  .header-content {
+    padding-left: px2rem(23px);
+  }
+  .header-item {
+    float: left;
+    color: #d1df87;
+    font-size: px2rem(12px);
+    margin-right: px2rem(20px);
+    line-height: px2rem(40px);
+    &:nth-child(2) {
+      color: #fff;
+      font-size: px2rem(16px);
+    }
+  }
+}
+
+.banner {
+  position: relative;
+  .banner-img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .banner-title {
+    position: absolute;
+    right: px2rem(20px);
+    bottom: px2rem(15px);
+    font-size: px2rem(25px);
+    color: #fff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+  }
+}
+
+.top {
+  .top-item {
+    width: 100%;
+    height: px2rem(90px);
+    padding-left: px2rem(15px);
+    padding-right: px2rem(15px);
+    box-sizing: border-box;
+  }
+  .item-inner {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    border-bottom: px2rem(1px) solid #e5e5e5;
+  }
+  .top-img {
+    float: left;
+    display: block;
+    margin-top: px2rem(10px);
+    width: px2rem(95px);
+    height: px2rem(70px);
+    margin-right: px2rem(10px);
+  }
+  .top-title {
+    color: #404040;
+    font-size: px2rem(15px);
+    margin-top: px2rem(16px);
+    line-height: px2rem(20px);
+  }
+  .time {
+    color: #888;
+    font-size: px2rem(12px);
+    position: absolute;
+    left: px2rem(105px);
+    bottom: px2rem(17px);
+  }
+  .num {
+    position: absolute;
+    color: #888;
+    font-size: px2rem(12px);
+    right: px2rem(4px);
+    bottom: px2rem(17px);
+    &:before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      width: px2rem(12px);
+      height: px2rem(12px);
+      background-size: contain;
+      top: px2rem(0px);
+      left: px2rem(-17px);
+      background-image: url('../images/good.png');
+
+    }
+  }
+}
